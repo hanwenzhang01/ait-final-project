@@ -1,5 +1,3 @@
-The content below is an example project proposal / requirements document. Replace the text below the lines marked "__TODO__" with details specific to your project. Remove the "TODO" lines.
-
 # BookShelf
 
 ## Overview
@@ -14,8 +12,7 @@ The application will store Users and Books
   * these bookshelves will sort a User's Books into 'want to read', 'currently reading', and 'read' categories
 * each Book will have an author, title, shelf, and progress %, with an optional start/end date, review, star review, year, genre, and summary
   * Users can only change the progress % for books they are currently reading, while 'want to read' will be set at 0% and 'read' will be set at 100%
-  * Users can only change the review for books they are currently reading or have read, otherwise the review will be blank
-
+  * Users can only create a word/star review for books they have read
 An Example User:
 
 ```javascript
@@ -39,7 +36,7 @@ An Example Book:
   
   //optional elements
   review: "this book sucks" //string
-  stars: 0 //numbered rating 0-5
+  stars: 1 //numbered rating 1-5
   startDate: 05/12/2023 //date
   endDate: 07/19/2023 //date
   year: 2021 //year published
@@ -53,63 +50,81 @@ An Example Book:
 
 ## Wireframes
 
-(__TODO__: wireframes for all of the pages on your site; they can be as simple as photos of drawings or you can use a tool like Balsamiq, Omnigraffle, etc.)
+/home - homepage before logging in
+![list create](documentation/loginHome.png)
 
-/list/create - page for creating a new shopping list
+/home - homepage after logging in
+![list](documentation/userHome.png)
 
-![list create](documentation/icon00.png)
+/all - all books
+![list](documentation/allShelf.png)
 
-/list - page for showing all shopping lists
+/wtr/add - adding to the 'want to read' shelf
+![list](documentation/wtrAdd.png)
 
-![list](documentation/list.png)
+/wtr/all - viewing the entire 'want to read' shelf
+![list](documentation/wtrShelf.png)
 
-/list/slug - page for showing specific shopping list
+/wtr/move - moving a book from 'want to read' to 'currently reading'
+![list](documentation/moveReading.png)
 
-![list](documentation/list-slug.png)
+/reading/add - adding to the 'currently reading' shelf
+![list](documentation/readingAdd.png)
+
+/reading/all - viewing the entire 'currently reading' shelf
+![list](documentation/readingShelf.png)
+
+/reading/move - moving a book from 'currently reading' to 'read'
+![list](documentation/moveRead.png)
+
+/read/add - adding to the 'read' shelf
+![list](documentation/readAdd.png)
+
+/read/all - viewing the entire 'read' shelf
+![list](documentation/readShelf.png)
 
 ## Site map
-
-(__TODO__: draw out a site map that shows how pages are related to each other)
-
-Here's a [complex example from wikipedia](https://upload.wikimedia.org/wikipedia/commons/2/20/Sitemap_google.jpg), but you can create one without the screenshots, drop shadows, etc. ... just names of pages and where they flow to.
+![list create](documentation/siteMap.png)
 
 ## User Stories or Use Cases
 
-(__TODO__: write out how your application will be used through [user stories](http://en.wikipedia.org/wiki/User_story#Format) and / or [use cases](https://en.wikipedia.org/wiki/Use_case))
-
 1. as non-registered user, I can register a new account with the site
 2. as a user, I can log in to the site
-3. as a user, I can create a new grocery list
-4. as a user, I can view all of the grocery lists I've created in a single list
-5. as a user, I can add items to an existing grocery list
-6. as a user, I can cross off items in an existing grocery list
-
+3. as a user, I can add a new book to any of three virtual shelves: want to read, currently reading, and read
+4. as a user, I can add the following information about any book: title, author, publication year, genre, and summary
+5. as a user, I can track my progress, in %, to a book I am currently reading
+6. as a user, I can add word and/or star reviews about any book I am reading or have read
+7. as a user, I can add the dates I started and/or finished a book
+8. as a user, I can view all of the books I've added to any single shelf in a single list
+9. as a user, I can view all of the books I've added to any shelf in a single list
+10. as a user, I can move books from the 'want to read' to the 'currently reading' shelf
+11. as a user, I can move books from the 'currently reading' to the 'read' shelf
 ## Research Topics
 
 (__TODO__: the research topics that you're planning on working on along with their point values... and the total points of research topics listed)
 
-* (5 points) Integrate user authentication
-    * I'm going to be using passport for user authentication
-    * And account has been made for testing; I'll email you the password
-    * see <code>cs.nyu.edu/~jversoza/ait-final/register</code> for register page
-    * see <code>cs.nyu.edu/~jversoza/ait-final/login</code> for login page
-* (4 points) Perform client side form validation using a JavaScript library
-    * see <code>cs.nyu.edu/~jversoza/ait-final/my-form</code>
-    * if you put in a number that's greater than 5, an error message will appear in the dom
-* (5 points) vue.js
-    * used vue.js as the frontend framework; it's a challenging library to learn, so I've assigned it 5 points
+* (3 points) Perform client side form validation using custom JavaScript or JavaScript library
+    * will validate user input before the form is submitted
+    * will only allow valid inputs to be submitted and tell users how to format their input
+    * I will use custom JavaScript/a JavaScript library to achieve this task
+* (2 points) Use a CSS framework or UI toolkit, with reasonable customization of the framework:
+  * will improve the appearance of the website
+  * will make it easier to style the website for a more modern look
+  * possible choices: tailwind.css, Semantic UI, Bootstrap
+* (5 points) Automated functional testing for all of the routes
+    * will automate the web app for testing
+    * will be more robust than the testing I've done so far
+    * possible choices: Selenium, Headless Chrome
 
-10 points total out of 8 required points (___TODO__: addtional points will __not__ count for extra credit)
+10 points total out of 8 required points
 
 
 ## [Link to Initial Main Project File](app.mjs) 
 
-(__TODO__: create a skeleton Express application with a package.json, app.mjs, views folder, etc. ... and link to your initial app.mjs)
-
 ## Annotations / References Used
 
-(__TODO__: list any tutorials/references/etc. that you've based your code off of)
-
-1. [passport.js authentication docs](http://passportjs.org/docs) - (add link to source code that was based on this)
-2. [tutorial on vue.js](https://vuejs.org/v2/guide/) - (add link to source code that was based on this)
-
+1. [tailwind.css site](https://tailwindcss.com/)
+2. [Bootstrap site](https://getbootstrap.com/)
+3. [semantic UI site](https://semantic-ui.com/)
+4. [Selinium site](https://www.selenium.dev/)
+5. [Headless Chrome site](https://developer.chrome.com/blog/headless-karma-mocha-chai/)
