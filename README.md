@@ -1,57 +1,55 @@
 The content below is an example project proposal / requirements document. Replace the text below the lines marked "__TODO__" with details specific to your project. Remove the "TODO" lines.
 
-(__TODO__: your project name)
-
-# Shoppy Shoperson 
+# BookShelf
 
 ## Overview
 
-(__TODO__: a brief one or two paragraph, high-level description of your project)
-
-Remembering what to buy at the grocery store is waaaaay too difficult. Also, shopping for groceries when you're hungry leads to regrettable purchases. Sooo... that's where Shoppy Shoperson comes in!
-
-Shoppy Shoperson is a web app that will allow users to keep track of multiple grocery lists. Users can register and login. Once they're logged in, they can create or view their grocery list. For every list that they have, they can add items to the list or cross off items.
-
+A virtual bookshelf. Users can register and login to access, store and update lists of books they want to read, are currently reading, and have finished reading. Each book entry includes the author, title, and user progress. Users can also add a publication year, genre, summary, start/finish dates, and reviews of books they have marked as read. 
 
 ## Data Model
 
-(__TODO__: a description of your application's data and their relationships to each other) 
+The application will store Users and Books
 
-The application will store Users, Lists and Items
-
-* users can have multiple lists (via references)
-* each list can have multiple items (by embedding)
-
-(__TODO__: sample documents)
+* users will have three bookshelves (arrays of Books)
+  * these bookshelves will sort a User's Books into 'want to read', 'currently reading', and 'read' categories
+* each Book will have an author, title, shelf, and progress %, with an optional start/end date, review, star review, year, genre, and summary
+  * Users can only change the progress % for books they are currently reading, while 'want to read' will be set at 0% and 'read' will be set at 100%
+  * Users can only change the review for books they are currently reading or have read, otherwise the review will be blank
 
 An Example User:
 
 ```javascript
 {
-  username: "shannonshopper",
-  hash: // a password hash,
-  lists: // an array of references to List documents
+  username: "myUser",
+  hash: "hfdFDjk4%(4FGy8#21bgS%" // a password hash,
+  bookshelves: [wantToRead, reading, read] // an array of 3 sub-arrays
+  // each sub-array stores Book objects
 }
 ```
 
-An Example List with Embedded Items:
+An Example Book:
 
 ```javascript
 {
-  user: // a reference to a User object
-  name: "Breakfast foods",
-  items: [
-    { name: "pancakes", quantity: "9876", checked: false},
-    { name: "ramen", quantity: "2", checked: true},
-  ],
-  createdAt: // timestamp
+  user: "myUser" // a reference to a User object
+  shelf: "wantToRead",
+  author: "Colleen Hoover" //string
+  title: "Fated" //string
+  progress: 0 //number, 0 as we want to read it
+  
+  //optional elements
+  review: "this book sucks" //string
+  stars: 0 //numbered rating 0-5
+  startDate: 05/12/2023 //date
+  endDate: 07/19/2023 //date
+  year: 2021 //year published
+  genre: "Romance" //string
+  summary: "idk they fall in love" //string
 }
 ```
 
 
 ## [Link to Commented First Draft Schema](db.mjs) 
-
-(__TODO__: create a first draft of your Schemas in db.mjs and link to it)
 
 ## Wireframes
 
@@ -59,7 +57,7 @@ An Example List with Embedded Items:
 
 /list/create - page for creating a new shopping list
 
-![list create](documentation/list-create.png)
+![list create](documentation/icon00.png)
 
 /list - page for showing all shopping lists
 
