@@ -1,8 +1,9 @@
 # BookShelf
 
+# __TODO: THINK ABOUT EDITING?__
 ## Overview
 
-A virtual bookshelf. Users can register and login to access, store and update lists of books they want to read, are currently reading, and have finished reading. Each book entry includes the author, title, and user progress. Users can also add a publication year, genre, summary, start/finish dates, and reviews of books they have marked as read. 
+A virtual media stand. Users can store lists of books, movies, and albums they enjoy. Users can see the entire media stand on the home page, or see individual lists of books, movies, or albums. **__users can also edit items?? or not lol__**
 
 ## Data Model
 
@@ -13,41 +14,56 @@ The application will store Users and Books
 * each Book will have an author, title, shelf, and progress %, with an optional start/end date, review, star review, year, genre, and summary
   * Users can only change the progress % for books they are currently reading, while 'want to read' will be set at 0% and 'read' will be set at 100%
   * Users can only create a word/star review for books they have read
-An Example User:
-
-```javascript
-{
-  username: "myUser",
-  hash: "hfdFDjk4%(4FGy8#21bgS%" // a password hash,
-  bookshelves: [wantToRead, reading, read] // an array of 3 sub-arrays
-  // each sub-array stores Book objects
-}
-```
 
 An Example Book:
 
 ```javascript
 {
-  user: "myUser" // a reference to a User object
-  shelf: "wantToRead",
   author: "Colleen Hoover" //string
   title: "Fated" //string
-  progress: 0 //number, 0 as we want to read it
   
   //optional elements
   review: "this book sucks" //string
   stars: 1 //numbered rating 1-5
-  startDate: 05/12/2023 //date
-  endDate: 07/19/2023 //date
   year: 2021 //year published
   genre: "Romance" //string
-  summary: "idk they fall in love" //string
+}
+```
+
+An Example Movie:
+
+```javascript
+{
+  title: "Oppenheimer" //string
+  year: 2023 //number
+  
+  //optional elements
+  review: "so long" //string
+  stars: 3 //numbered rating 1-5
+  genre: "Drama" //string
+  rating: "R" //string
+}
+```
+
+An Example Album:
+
+```javascript
+{
+  title: "1989 (Taylor's Version)" //string
+  artist: "Taylor Swift" //string
+  
+  //optional elements
+  review: "amazing love groundbreaking life-changing never-before-seen" //string
+  stars: 5 //numbered rating 1-5
+  year: 2023 //year published
+  genre: "Pop" //string
 }
 ```
 
 
 ## [Link to Commented First Draft Schema](db.mjs) 
 
+# __!!! TODO: UPDATE WIREFRAMES !!!__
 ## Wireframes
 
 /home - homepage before logging in
@@ -83,25 +99,17 @@ An Example Book:
 /read/all - viewing the entire 'read' shelf
 ![list](documentation/readShelf.png)
 
+# __!!! TODO: UPDATE SITE MAP !!!__
 ## Site map
 ![list create](documentation/siteMap.png)
 
+# __!!! TODO: UPDATE USER STORIES !!!__
 ## User Stories or Use Cases
 
-1. as non-registered user, I can register a new account with the site
-2. as a user, I can log in to the site
-3. as a user, I can add a new book to any of three virtual shelves: want to read, currently reading, and read
-4. as a user, I can add the following information about any book: title, author, publication year, genre, and summary
-5. as a user, I can track my progress, in %, to a book I am currently reading
-6. as a user, I can add word and/or star reviews about any book I am reading or have read
-7. as a user, I can add the dates I started and/or finished a book
-8. as a user, I can view all of the books I've added to any single shelf in a single list
-9. as a user, I can view all of the books I've added to any shelf in a single list
-10. as a user, I can move books from the 'want to read' to the 'currently reading' shelf
-11. as a user, I can move books from the 'currently reading' to the 'read' shelf
-## Research Topics
+* as a user, I can...
 
-(__TODO__: the research topics that you're planning on working on along with their point values... and the total points of research topics listed)
+# __!!! TODO: UPDATE RESEARCH TOPICS !!!__
+## Research Topics
 
 * (3 points) Perform client side form validation using custom JavaScript or JavaScript library
     * will validate user input before the form is submitted
@@ -115,8 +123,9 @@ An Example Book:
     * will automate the web app for testing
     * will be more robust than the testing I've done so far
     * possible choices: Selenium, Headless Chrome
+  * (2 points) SweetAlert - promise based js library??
 
-10 points total out of 8 required points
+10 points total out of 10 required points
 
 
 ## [Link to Initial Main Project File](app.mjs) 
