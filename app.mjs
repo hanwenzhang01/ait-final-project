@@ -97,6 +97,7 @@ function filterBooks(req) {
       year: req.body.year,
       genre: req.body.genre.trim()
     });
+    //hi lol
     //req.session.books.push(book);
     booksArr.push(book);
     await book.save();
