@@ -1,6 +1,6 @@
-body {
-	font-family: 'Fira Sans Extra Condensed', sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 nav ul {
     display: block;

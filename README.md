@@ -1,19 +1,16 @@
 # BookShelf
 
-# __TODO: THINK ABOUT EDITING?__
 ## Overview
 
-A virtual media stand. Users can store lists of books, movies, and albums they enjoy. Users can see the entire media stand on the home page, or see individual lists of books, movies, or albums. **__users can also edit items?? or not lol__**
+A virtual media stand. Users can store lists of books, movies, and albums they enjoy. Users can see the entire media stand on the home page, or see individual lists of books, movies, or albums.
 
 ## Data Model
 
-The application will store Users and Books
+The application will store Books, Movies, and Albums.
 
-* users will have three bookshelves (arrays of Books)
-  * these bookshelves will sort a User's Books into 'want to read', 'currently reading', and 'read' categories
-* each Book will have an author, title, shelf, and progress %, with an optional start/end date, review, star review, year, genre, and summary
-  * Users can only change the progress % for books they are currently reading, while 'want to read' will be set at 0% and 'read' will be set at 100%
-  * Users can only create a word/star review for books they have read
+* each Book will have an author and title, with  optional elements: reviews (word- or star-based), publication year, and genre
+* each Movie with have a title and year, with optional elements: reviews (word- or star-based), maturity rating, and genre
+* each Album will have a title and artist, with optional elements: review (word- or star-based), release year, and genre
 
 An Example Book:
 
@@ -63,52 +60,45 @@ An Example Album:
 
 ## [Link to Commented First Draft Schema](db.mjs) 
 
-# __!!! TODO: UPDATE WIREFRAMES !!!__
+# __WILL DO: UPDATE WIREFRAMES__
 ## Wireframes
 
-/home - homepage before logging in
-![list create](documentation/loginHome.png)
+/home - homepage
+<!--![list create](documentation/loginHome.png)-->
 
-/home - homepage after logging in
-![list](documentation/userHome.png)
+/addBook - add a book to the shelf
+<!--![list](documentation/allShelf.png)-->
 
-/all - all books
-![list](documentation/allShelf.png)
+/addMovie - add a movie to the shelf
+<!--![list](documentation/allShelf.png)-->
 
-/wtr/add - adding to the 'want to read' shelf
-![list](documentation/wtrAdd.png)
+/addAlbum - add an album to the shelf
+<!--![list](documentation/allShelf.png)-->
 
-/wtr/all - viewing the entire 'want to read' shelf
-![list](documentation/wtrShelf.png)
+/books - see all books
+<!--![list](documentation/allShelf.png)-->
 
-/wtr/move - moving a book from 'want to read' to 'currently reading'
-![list](documentation/moveReading.png)
+/movies - see all movies
+<!--![list](documentation/allShelf.png)-->
 
-/reading/add - adding to the 'currently reading' shelf
-![list](documentation/readingAdd.png)
+/albums - see all albums
+<!--![list](documentation/allShelf.png)-->
 
-/reading/all - viewing the entire 'currently reading' shelf
-![list](documentation/readingShelf.png)
-
-/reading/move - moving a book from 'currently reading' to 'read'
-![list](documentation/moveRead.png)
-
-/read/add - adding to the 'read' shelf
-![list](documentation/readAdd.png)
-
-/read/all - viewing the entire 'read' shelf
-![list](documentation/readShelf.png)
-
-# __!!! TODO: UPDATE SITE MAP !!!__
+# __WILL DO: UPDATE SITE MAP__
 ## Site map
-![list create](documentation/siteMap.png)
+<!--![list create](documentation/siteMap.png)-->
 
-# __!!! TODO: UPDATE USER STORIES !!!__
-## User Stories or Use Cases
+## User Stories
+as a user, I can...
+* see all my media elements and their information on my home page
+* see all my books on one page
+* see all my movies on one page
+* see all my albums on one page
+* add a new book to my shelf
+* add a new movie to my shelf
+* add a new album to my shelf
 
-* as a user, I can...
-
-# __!!! TODO: UPDATE RESEARCH TOPICS !!!__
+<!--# __!!! TODO: UPDATE RESEARCH TOPICS !!!__-->
 ## Research Topics
 
 * (3 points) Perform client side form validation using custom JavaScript or JavaScript library
