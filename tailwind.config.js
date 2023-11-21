@@ -2,7 +2,7 @@
 module.exports = {
   content: ["/views/**.hbs"],
 
-  //theme came from tailwind.css site, will customize later
+  //theme came from tailwind.css site, may customize later
   // src: https://tailwindcss.com/docs/adding-custom-styles
   theme: {
     screens: {
