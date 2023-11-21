@@ -1,6 +1,6 @@
-import express from 'express'
-import path from 'path'
-import './config.mjs'
+import express from 'express';
+import path from 'path';
+import './config.mjs';
 import { fileURLToPath } from 'url';
 
 const app = express();
@@ -25,7 +25,6 @@ const Album = mongoose.model('Album');
 // body parser (req.body)
 app.use(express.urlencoded({ extended: false }));
 
-/*
 // session stuff
 const sessionOptions = { 
 	secret: 'session id secret 123', 
@@ -33,7 +32,6 @@ const sessionOptions = {
 	resave: false
 };
 app.use(session(sessionOptions));
-// middleware to log requests
 app.use(function(req, res, next){
   //storing session books
   req.session.books = req.session.books || [];
@@ -48,10 +46,11 @@ app.use(function(req, res, next){
   res.locals.albums = req.session.albums;
   next();
 });
+/*
+const booksArr = [];
+const moviesArr = [];
+const albumsArr = [];
 */
-let booksArr = [];
-let moviesArr = [];
-let albumsArr = [];
 
 /*
 function filterBooks(req) {
@@ -98,8 +97,8 @@ function filterBooks(req) {
       genre: req.body.genre.trim()
     });
     //hi lol
-    //req.session.books.push(book);
-    booksArr.push(book);
+    req.session.books.push(book);
+    //booksArr.push(book);
     await book.save();
     res.redirect('/');
   });
@@ -118,33 +117,31 @@ function filterBooks(req) {
       rating: req.body.rating,
       genre: req.body.genre.trim()
     });
-    moviesArr.push(movie);
+    req.session.movies.push(movie);
+    //moviesArr.push(movie);
     await movie.save();
     res.redirect('/');
   });
-  /*
-  app.get('/reviews/add', (req,res) => {
-    res.render('add');
+
+  app.get('/addalbum', async (req, res) => {
+    res.render('addAlbum');
   });
-  
-  app.get('/reviews/mine', (req,res) => {
-    res.render('reviews', {rev: req.session.reviews});
-  });
-  
-  app.post('/reviews/add', async (req,res) => {
-    const review = new Review({
-      courseNumber: req.body.courseNumber.trim(),
-      courseName: req.body.courseName.trim(),
-      semester: req.body.semester,
+
+  app.post('/addAlbum', async (req, res) => {
+    const album = new Album({
+      title: req.body.title.trim(),
+      artist: req.body.artist.trim(),
+
+      stars: req.body.stars,
+      review: req.body.review.trim(),
       year: req.body.year,
-      professor: req.body.professor.trim(),
-      review: req.body.review.trim()
+      genre: req.body.genre.trim()
     });
-    req.session.reviews.push(review);
-    await review.save();
-    //console.log('review: ', await Review.find());
+    req.session.albums.push(album);
+    //albumsArr.push(album);
+    await album.save();
     res.redirect('/');
   });
-  */
+  
 
 app.listen(process.env.PORT ?? 3000);
