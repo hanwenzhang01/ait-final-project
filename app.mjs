@@ -3,7 +3,6 @@ import path from 'path';
 import './config.mjs';
 import { fileURLToPath } from 'url';
 import Swal from 'sweetalert2';
-import 'animate.css';
 
 const app = express();
 //import session from 'express-session';
