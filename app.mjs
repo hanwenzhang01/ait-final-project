@@ -72,14 +72,15 @@ function filterBooks(req) {
     return filterObj;
   }
   */
+ /*
   async function deleteAll() {
     await Book.deleteMany({});
     await Movie.deleteMany({});
     await Album.deleteMany({});
-  }
+  }*/
 
-  app.get('/delete', (req,res) => {
-    Swal.fire({
+  app.get('/delete', async(req,res) => {
+    /*Swal.fire({
       title: 'Do you want to save the changes?',
       showDenyButton: true,
       showCancelButton: true,
@@ -98,7 +99,10 @@ function filterBooks(req) {
       } else if (result.isDenied) {
         Swal.fire('Changes are not saved', '', 'info');
       }
-    });
+    });*/
+    await Book.deleteMany({});
+    await Movie.deleteMany({});
+    await Album.deleteMany({});
     res.redirect('/');
   });
 
