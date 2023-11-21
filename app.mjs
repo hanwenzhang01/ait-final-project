@@ -2,6 +2,8 @@ import express from 'express';
 import path from 'path';
 import './config.mjs';
 import { fileURLToPath } from 'url';
+import Swal from 'sweetalert2';
+import 'animate.css';
 
 const app = express();
 //import session from 'express-session';
@@ -71,19 +73,34 @@ function filterBooks(req) {
     return filterObj;
   }
   */
-  
-  app.get('/', async (req, res) => {
 
-  });
-
-  app.get('/delete', async(req,res) => {
-    await Book.deleteMany({});
-    await Movie.deleteMany({});
-    await Album.deleteMany({});
+  app.get('/delete', (req,res) => {
+    Swal.fire({
+      title: 'Do you want to save the changes?',
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'Yes',
+      denyButtonText: 'No',
+      customClass: {
+        actions: 'my-actions',
+        cancelButton: 'order-1 right-gap',
+        confirmButton: 'order-2',
+        denyButton: 'order-3',
+      },
+    }).then(async(result) => {
+      if (result.isConfirmed) {
+        Swal.fire('Saved!', '', 'success');
+        await Book.deleteMany({});
+        await Movie.deleteMany({});
+        await Album.deleteMany({});
+      } else if (result.isDenied) {
+        Swal.fire('Changes are not saved', '', 'info');
+      }
+    });
     res.redirect('/');
   });
 
-  app.get('/home', async (req, res) => {
+  app.get('/', async (req, res) => {
     //res.send('TODO: add / modify routes')
     const books = await Book.find();
     const movies = await Movie.find();
