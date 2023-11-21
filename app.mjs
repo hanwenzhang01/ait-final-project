@@ -4,7 +4,7 @@ import './config.mjs';
 import { fileURLToPath } from 'url';
 
 const app = express();
-import session from 'express-session';
+//import session from 'express-session';
 import './db.mjs';
 import mongoose from 'mongoose';
 
@@ -25,6 +25,7 @@ const Album = mongoose.model('Album');
 // body parser (req.body)
 app.use(express.urlencoded({ extended: false }));
 
+/*
 // session stuff
 const sessionOptions = { 
 	secret: 'session id secret 123', 
@@ -46,11 +47,10 @@ app.use(function(req, res, next){
   res.locals.albums = req.session.albums;
   next();
 });
-/*
+*/
 const booksArr = [];
 const moviesArr = [];
 const albumsArr = [];
-*/
 
 /*
 function filterBooks(req) {
@@ -97,8 +97,8 @@ function filterBooks(req) {
       genre: req.body.genre.trim()
     });
     //hi lol
-    req.session.books.push(book);
-    //booksArr.push(book);
+    //req.session.books.push(book);
+    booksArr.push(book);
     await book.save();
     res.redirect('/');
   });
@@ -117,8 +117,8 @@ function filterBooks(req) {
       rating: req.body.rating,
       genre: req.body.genre.trim()
     });
-    req.session.movies.push(movie);
-    //moviesArr.push(movie);
+    //req.session.movies.push(movie);
+    moviesArr.push(movie);
     await movie.save();
     res.redirect('/');
   });
@@ -137,8 +137,8 @@ function filterBooks(req) {
       year: req.body.year,
       genre: req.body.genre.trim()
     });
-    req.session.albums.push(album);
-    //albumsArr.push(album);
+    //req.session.albums.push(album);
+    albumsArr.push(album);
     await album.save();
     res.redirect('/');
   });
