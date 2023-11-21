@@ -72,6 +72,11 @@ function filterBooks(req) {
     return filterObj;
   }
   */
+  async function deleteAll() {
+    await Book.deleteMany({});
+    await Movie.deleteMany({});
+    await Album.deleteMany({});
+  }
 
   app.get('/delete', (req,res) => {
     Swal.fire({
@@ -86,12 +91,11 @@ function filterBooks(req) {
         confirmButton: 'order-2',
         denyButton: 'order-3',
       },
-    }).then(async(result) => {
+    })
+    .then((result) => {
       if (result.isConfirmed) {
         Swal.fire('Saved!', '', 'success');
-        await Book.deleteMany({});
-        await Movie.deleteMany({});
-        await Album.deleteMany({});
+        deleteAll();
       } else if (result.isDenied) {
         Swal.fire('Changes are not saved', '', 'info');
       }
