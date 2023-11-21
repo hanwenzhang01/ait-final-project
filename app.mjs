@@ -82,13 +82,6 @@ function filterBooks(req) {
     res.render('home', {books, movies, albums});
   });
 
-  app.get('/delete', async(req,res) => {
-    await Book.deleteMany({});
-    await Movie.deleteMany({});
-    await Album.deleteMany({});
-    res.redirect('/');
-  });
-
   app.get('/addBook', async (req, res) => {
     res.render('addBook');
   });
