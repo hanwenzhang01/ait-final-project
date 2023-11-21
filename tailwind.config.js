@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["/views/**.hbs"],
+  content: ["./views/*.hbs"],
 
   //theme came from tailwind.css site, may customize later
   // src: https://tailwindcss.com/docs/adding-custom-styles
@@ -19,6 +19,10 @@ module.exports = {
       'gray-dark': '#273444',
       'gray': '#8492a6',
       'gray-light': '#d3dce6',
+      'slate-800': 'rgb(30 41 59)', 
+      'gray-300': 'rgb(203 213 225)',
+      'white': '#fff', 
+      'cyan-500': 'rgb(6 182 212)'
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],

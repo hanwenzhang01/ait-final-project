@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1{
+    @apply text-4xl font-bold text-center text-slate-800;
+}
+
+h2 {
+    @apply text-2xl font-bold text-center text-slate-800;
+}
+
+h3 {
+    @apply text-xl font-bold text-center text-slate-800;
+}
+
+nav ul {
+    @apply block flex-col items-center justify-center;
+    @apply w-1/2;
+    @apply text-2xl font-bold text-center text-slate-800;
+    @apply list-none;
+}
+
+nav li a:hover {
+    @apply bg-gray-300;
+    @apply text-white;
+}
+
+nav .active {
+    @apply bg-cyan-500;
+    @apply text-white;
+}
