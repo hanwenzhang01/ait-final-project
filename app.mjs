@@ -73,6 +73,17 @@ function filterBooks(req) {
   */
   
   app.get('/', async (req, res) => {
+
+  });
+
+  app.get('/delete', async(req,res) => {
+    await Book.deleteMany({});
+    await Movie.deleteMany({});
+    await Album.deleteMany({});
+    res.redirect('/');
+  });
+
+  app.get('/home', async (req, res) => {
     //res.send('TODO: add / modify routes')
     const books = await Book.find();
     const movies = await Movie.find();
