@@ -91,8 +91,7 @@ function filterBooks(req) {
         confirmButton: 'order-2',
         denyButton: 'order-3',
       },
-    })
-    .then((result) => {
+    }).then(result => {
       if (result.isConfirmed) {
         Swal.fire('Saved!', '', 'success');
         deleteAll();
