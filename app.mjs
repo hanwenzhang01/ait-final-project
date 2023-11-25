@@ -172,8 +172,11 @@ function filterBooks(req) {
       genre: req.body.genre.trim()
     });
     //req.session.albums.push(album);
+    console.log('175')
     albumsArr.push(album);
+    console.log('176')
     await album.save();
+    console.log('179');
     res.redirect('/');
   });
   

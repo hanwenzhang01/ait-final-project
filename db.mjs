@@ -18,7 +18,7 @@ const Book = new mongoose.Schema({
   // the year the book was published
   year: {type: Number, required: false},
   // genre
-  genre: {type: String, required: false},
+  genre: {type: String, required: false}
 });
 
 
@@ -49,14 +49,14 @@ const Album = new mongoose.Schema({
   artist: {type: String, required: true},
 
 //optional elements
-  // user review, in stars (0-5)
+  // user review, in stars (1-5)
   stars: {type: Number, required: false},
   // user review, in words
   review: {type: String, required: false},
   // release year
   year: {type: Number, required: false},
   // genre
-  genre: {type: String, required: false},
+  genre: {type: String, required: false}
 });
 
 mongoose.model('Book', Book);
