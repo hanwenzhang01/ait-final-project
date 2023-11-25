@@ -157,11 +157,12 @@ function filterBooks(req) {
     res.redirect('/');
   });
 
-  app.get('/addalbum', async (req, res) => {
+  app.get('/addAlbum', async (req, res) => {
     res.render('addAlbum');
   });
 
   app.post('/addAlbum', async (req, res) => {
+    console.log('start of post')
     const album = new Album({
       title: req.body.title.trim(),
       artist: req.body.artist.trim(),
@@ -172,11 +173,11 @@ function filterBooks(req) {
       genre: req.body.genre.trim()
     });
     //req.session.albums.push(album);
-    console.log('175')
+    console.log('before push')
     albumsArr.push(album);
-    console.log('176')
+    console.log('before save')
     await album.save();
-    console.log('179');
+    console.log('before redirect');
     res.redirect('/');
   });
   
