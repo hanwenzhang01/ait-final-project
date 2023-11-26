@@ -5,13 +5,15 @@
     </head>
 
     <body>
-        <form action="" method="POST" >
+        <script src="jquery.js"></script>
+        <script src="parsley.js"></script>
+        <form action="" method="POST" data-parsley-validate="">
             <h4>title:</h4>
             <input 
                 type="text"
                 name="title" 
                 placeholder="title"
-                required="true"/>
+                data-parsley-required=""/>
             <br>
 
             <h4>author:</h4>
@@ -19,10 +21,46 @@
                 type="text"
                 name="author"
                 placeholder="author"
-                required="true"/>
+                data-parsley-required=""/>
             <br>
 
-            <h4>review, in stars:</h4>
+            <link href="css/star-rating.css" rel="stylesheet">
+            <label class="star-rating">review, in stars</label>
+            <select class="star-rating" name="stars">
+                <option value="">Select a rating</option>
+                <option value="5">Excellent</option>
+                <option value="4">Very Good</option>
+                <option value="3">Average</option>
+                <option value="2">Poor</option>
+                <option value="1">Terrible</option>
+            </select>
+
+            <script src="js/star-rating.min.js"></script>
+            <script>
+                var stars = new StarRating('.star-rating');
+            </script>
+
+            <!--
+            <span class="gl-star-rating">
+                <select>
+                    <option value="">Select a rating</option>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                </select>
+                <span class="gl-star-rating //add extra - back // -stars">
+                    <span data-value="1"></span>
+                    <span data-value="2"></span>
+                    <span data-value="3"></span>
+                    <span data-value="4"></span>
+                    <span data-value="5"></span>
+                </span>
+            </span>
+            -->
+            <!--
+                <h4>review, in stars:</h4>
                 <div class="stars">
                     <input type="radio" id="star5" name="stars" value="5" />
                         <label for="star5" title="text">5 stars</label>
@@ -35,6 +73,7 @@
                     <input type="radio" id="star1" name="stars" value="1" />
                         <label for="star1" title="text">1 star</label>
                 </div>
+            -->
             <br>
 
             <h4>review, in words:</h4>
@@ -46,7 +85,10 @@
 
             <h4>publication year:</h4>
             <input 
-                type="number" 
+                type="text" 
+                data-parsley-valid-year="true"
+                data-parsley-maxlength="6"
+                data-parsley-pattern="[0-9]{1-4}|[0-9]{1-4}BC|[0-9]{1-4}AD"
                 name="year" 
                 placeholder="year"/>
             <br>

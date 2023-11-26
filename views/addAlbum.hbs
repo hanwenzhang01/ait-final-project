@@ -5,13 +5,15 @@
     </head>
 
     <body>
-        <form action="" method="POST" >
+        <script src="jquery.js"></script>
+        <script src="parsley.js"></script>
+        <form action="" method="POST" data-parsley-validate="">
             <h4>title:</h4>
             <input 
                 type="text"
                 name="title" 
                 placeholder="title"
-                required="true"/>
+                data-parsley-required=""/>
             <br>
 
             <h4>artist:</h4>
@@ -19,7 +21,7 @@
                 type="text"
                 name="artist" 
                 placeholder="artist"
-                required="true"/>
+                data-parsley-required=""/>
             <br>
 
             <h4>review, in stars:</h4>
@@ -56,7 +58,9 @@
 
             <h4>year:</h4>
             <input
-                type="number"
+                data-parsley-type="integer"
+                data-parsley-range="[1860, 2023]"
+                    <!--bc according to google the first musical recording was made in 1860-->
                 name="year"
                 placeholder="release year"/>
             <br>

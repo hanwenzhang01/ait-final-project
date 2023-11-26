@@ -16,7 +16,7 @@ const Book = new mongoose.Schema({
   // user review, in words
   review: {type: String, required: false},
   // the year the book was published
-  year: {type: Number, required: false},
+  year: {type: String, required: false},
   // genre
   genre: {type: String, required: false}
 });

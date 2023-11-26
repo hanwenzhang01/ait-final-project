@@ -5,21 +5,25 @@
     </head>
 
     <body>
-        <form action="" method="POST" >
+        <script src="jquery.js"></script>
+        <script src="parsley.js"></script>
+        <form action="" method="POST" data-parsley-validate="">
             <h4>title:</h4>
             <input 
                 type="text"
                 name="title" 
                 placeholder="title"
-                required="true"/>
+                data-parsley-required=""/>
             <br>
 
             <h4>year:</h4>
             <input
-                type="number"
+                data-parsley-type="integer"
+                data-parsley-range="[1888, 2023]"
+                    <!--bc according to google the first movie was made in 1888-->
                 name="year"
                 placeholder="release year"
-                required="true"/>
+                data-parsley-required=""/>
             <br>
 
             <h4>review, in stars:</h4>
