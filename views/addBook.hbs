@@ -5,26 +5,14 @@
     </head>
 
     <body>
-       <script src="/jquery/dist/jquery.js"></script>
-        <script src="/parsleyjs/dist/parsley.js"></script>
-
-        <div class="bs-callout bs-callout-warning hidden">
-            <h4>Oh snap!</h4>
-            <p>This form seems to be invalid :(</p>
-        </div>
-
-        <div class="bs-callout bs-callout-info hidden">
-            <h4>Yay!</h4>
-            <p>Everything seems to be ok :)</p>
-        </div>
-
-        <form id="bookform" action="" method="POST" data-parsley-validate="">
+       <script type="module" src="/javascripts/main.js"></script>
+        <form id="bookform" action="" method="POST">
             <h4>title:</h4>
             <input 
                 type="text"
                 name="title" 
                 placeholder="title"
-                data-parsley-required=""/>
+                data-rules="required"/>
             <br>
 
             <h4>author:</h4>
@@ -32,7 +20,7 @@
                 type="text"
                 name="author"
                 placeholder="author"
-                data-parsley-required=""/>
+                data-rules="required"/>
             <br>
 
             <h4>review, in stars:</h4>
@@ -58,10 +46,9 @@
             <h4>publication year:</h4>
             <input 
                 type="text" 
-                data-parsley-maxlength="6"
-                data-parsley-pattern="[0-9]{1-4}|[0-9]{1-4}BC|[0-9]{1-4}AD"
                 name="year" 
-                placeholder="year"/>
+                placeholder="year"
+                data-rules="alpha-num|regex:/^[1-2023]|[1-3500]BC|[1-2023]AD|"/>
             <br>
 
             <h4>genre:</h4>
@@ -71,10 +58,7 @@
                 placeholder="genre"/>
             <br>
             <br>
-            <input type="submit" class="btn btn-default" value="submit"/>
+            <input type="submit" value="submit" class="submitButton"/>
         </form>
-        <script>
-            new Parsley('#form', options);
-        </script>
     </body>
 </html>

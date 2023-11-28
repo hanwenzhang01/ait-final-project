@@ -5,7 +5,7 @@
     </head>
 
     <body>
-        <script type="module" src="/movie.js"></script>
+        <script type="module" src="/javascripts/main.js"></script>
         <form action="" method="POST">
             <h4>title:</h4>
             <input 
@@ -13,17 +13,15 @@
                 type="text"
                 name="title" 
                 placeholder="title"
-                required=""/>
+                data-rules="required"/>
             <br>
             
             <h4>year:</h4>
             <input
                 id="year"
-                type="int"
                 name="year"
                 placeholder="release year"
-                required=""
-                <!--data-rules="int|between:1888,2023|required"-->/>
+                data-rules="int|between:1888,2023|required"/>
             <br>
 
             <h4>review, in stars:</h4>
@@ -65,7 +63,7 @@
                 placeholder="genre"/>
             <br>
             <br>
-            <input type="submit" value="submit" id="submitButton"/>
+            <input type="submit" value="submit" class="submitButton"/>
         </form>
     </body>
 </html>
