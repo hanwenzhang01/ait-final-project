@@ -12,7 +12,7 @@ const Book = new mongoose.Schema({
 
 //optional elements
   // user review, in stars (0-5)
-  stars: {type: Number, required: false},
+  stars: {type: String, required: false},
   // user review, in words
   review: {type: String, required: false},
   // the year the book was published

@@ -35,63 +35,19 @@
                 data-parsley-required=""/>
             <br>
 
-            <link href="../node_modules/star-rating.js/dist/star-rating.css" rel="stylesheet">
-            <label class="star-rating">review, in stars</label>
-            <!--
-            <select class="star-rating" name="stars">
-                <option value="">Select a rating</option>
-                <option value="5">Excellent</option>
-                <option value="4">Very Good</option>
-                <option value="3">Average</option>
-                <option value="2">Poor</option>
-                <option value="1">Terrible</option>
-            </select>
-
-            <script src="../node_modules/star-rating.js/dist/star-rating.min.js"></script>
-            <script>
-                var stars = new StarRating('.star-rating');
-            </script>
-            -->
-
-            
-            <span class="gl-star-rating">
-                <select>
-                    <option value="">Select a rating</option>
-                    <option value="5">5 Stars</option>
-                    <option value="4">4 Stars</option>
-                    <option value="3">3 Stars</option>
-                    <option value="2">2 Stars</option>
-                    <option value="1">1 Star</option>
-                </select>
-                <span class="gl-star-rating //add extra - back // -stars">
-                    <span data-value="1"></span>
-                    <span data-value="2"></span>
-                    <span data-value="3"></span>
-                    <span data-value="4"></span>
-                    <span data-value="5"></span>
-                </span>
-            </span>
-
-            <script src="../node_modules/star-rating.js/dist/star-rating.min.js"></script>
-            <script>
-                var stars = new StarRating('.star-rating');
-            </script>
-            
-            <!--
-                <h4>review, in stars:</h4>
-                <div class="stars">
-                    <input type="radio" id="star5" name="stars" value="5" />
-                        <label for="star5" title="text">5 stars</label>
-                    <input type="radio" id="star4" name="stars" value="4" />
-                        <label for="star4" title="text">4 stars</label>
-                    <input type="radio" id="star3" name="stars" value="3" />
-                        <label for="star3" title="text">3 stars</label>
-                    <input type="radio" id="star2" name="stars" value="2" />
-                        <label for="star2" title="text">2 stars</label>
-                    <input type="radio" id="star1" name="stars" value="1" />
-                        <label for="star1" title="text">1 star</label>
-                </div>
-            -->
+            <h4>review, in stars:</h4>
+            <div class="stars">
+                <input type="select" id="star5" name="stars" value="excellent" />
+                    <label for="star5" title="text">excellent</label>
+                <input type="select" id="star4" name="stars" value="good" />
+                    <label for="star4" title="text">good</label>
+                <input type="select" id="star3" name="stars" value="ok" />
+                    <label for="star3" title="text">ok</label>
+                <input type="select" id="star2" name="stars" value="bad" />
+                    <label for="star2" title="text">bad</label>
+                <input type="select" id="star1" name="stars" value="awful" />
+                    <label for="star1" title="text">awful</label>
+            </div>
             <br>
 
             <h4>review, in words:</h4>
