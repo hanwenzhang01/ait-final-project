@@ -108,22 +108,11 @@ function filterBooks(req) {
   });
 
   app.get('/', async (req, res) => {
-    //res.send('TODO: add / modify routes')
     const books = await Book.find();
     const movies = await Movie.find();
     const albums = await Album.find();
-    //console.log('typeof rev: ',typeof rev);
-    //console.log(rev);
     res.render('home', {books, movies, albums});
   });
-
-  app.get('/parsleyTest', (req,res) => {
-    res.render('parsleyTest');
-  });
-  app.post('/parsleyTest', (req,res) => {
-    res.redirect('/');
-  });
-
 
   app.get('/addBook', async (req, res) => {
     res.render('addBook');
