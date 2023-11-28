@@ -5,49 +5,24 @@
     </head>
 
     <body>
-        <script src="../node_modules/jquery/dist/jquery.js"></script>
-        <script src="../node_modules/parsleyjs/dist/parsley.js"></script>
-        <form action="" method="POST" data-parsley-validate="">
+        <script type="module" src="../javascripts/main.js"></script>
+        <form action="" method="POST">
             <h4>title:</h4>
             <input 
                 type="text"
                 name="title" 
                 placeholder="title"
-                data-parsley-required=""/>
+                data-rules="required"/>
             <br>
             
             <h4>year:</h4>
             <input
-                data-parsley-type="integer"
-                data-parsley-range="[1888, 2023]"
                 name="year"
                 placeholder="release year"
-                data-parsley-required=""/>
+                data-rules="int|between:1888,2023|required"/>
             <br>
 
             <h4>review, in stars:</h4>
-                <!-- <span class="stars">
-                    <input type="radio" name="stars" value="1" />
-                    <span class="icon">★</span>
-                    <input type="radio" name="stars" value="2" />
-                    <span class="icon">★</span>
-                    <span class="icon">★</span>
-                    <input type="radio" name="stars" value="3" />
-                    <span class="icon">★</span>
-                    <span class="icon">★</span>
-                    <span class="icon">★</span>   
-                    <input type="radio" name="stars" value="4" />
-                    <span class="icon">★</span>
-                    <span class="icon">★</span>
-                    <span class="icon">★</span>
-                    <span class="icon">★</span>
-                    <input type="radio" name="stars" value="5" />
-                    <span class="icon">★</span>
-                    <span class="icon">★</span>
-                    <span class="icon">★</span>
-                    <span class="icon">★</span>
-                    <span class="icon">★</span>
-                </span> -->
                 <select name="stars" required="">
                     <option value=""></option>
                     <option value="★★★★★">★★★★★</option>
