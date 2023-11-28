@@ -116,6 +116,14 @@ function filterBooks(req) {
     res.render('home', {books, movies, albums});
   });
 
+  app.get('/parsleyTest', (req,res) => {
+    res.render('parsleyTest');
+  });
+  app.post('/parsleyTest', (req,res) => {
+    res.redirect('/');
+  });
+
+
   app.get('/addBook', async (req, res) => {
     res.render('addBook');
   });

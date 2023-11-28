@@ -31,7 +31,7 @@ const Movie = new mongoose.Schema({
 
 //optional elements
   // user review, in stars (0-5)
-  stars: {type: Number, required: false},
+  stars: {type: String, required: false},
   // user review, in words
   review: {type: String, required: false},
   // maturity rating
@@ -50,7 +50,7 @@ const Album = new mongoose.Schema({
 
 //optional elements
   // user review, in stars (1-5)
-  stars: {type: Number, required: false},
+  stars: {type: String, required: false},
   // user review, in words
   review: {type: String, required: false},
   // release year
