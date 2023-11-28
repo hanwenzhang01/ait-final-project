@@ -1,8 +1,6 @@
 import { Validator, enLang as en } from '@upjs/facile-validator';
 console.log('in main.js')
 
-function main () {
-
   // Select the container element that contains the fields
   const form = document.querySelector('form');
 
@@ -30,6 +28,3 @@ function main () {
     console.log('in validation failure');
     alert('Oops! There are some errors in the form.');
   });
-}
-
-document.addEventListener('DOMContentLoaded', main);
