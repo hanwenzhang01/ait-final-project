@@ -7,7 +7,18 @@
     <body>
         <script src="../node_modules/jquery/dist/jquery.js"></script>
         <script src="../node_modules/parsleyjs/dist/parsley.js"></script>
-        <form action="" method="POST" data-parsley-validate="">
+
+        <div class="bs-callout bs-callout-warning hidden">
+            <h4>Oh snap!</h4>
+            <p>This form seems to be invalid :(</p>
+        </div>
+
+        <div class="bs-callout bs-callout-info hidden">
+            <h4>Yay!</h4>
+            <p>Everything seems to be ok :)</p>
+        </div>
+
+        <form id="bookform" action="" method="POST" data-parsley-validate="">
             <h4>title:</h4>
             <input 
                 type="text"
@@ -102,5 +113,17 @@
             <br>
             <input type="submit" value="submit" />
         </form>
+        <script type="text/javascript">
+            $(function () {
+                $('#bookform').parsley().on('field:validated', function() {
+                    var ok = $('.parsley-error').length === 0;
+                    $('.bs-callout-info').toggleClass('hidden', !ok);
+                    $('.bs-callout-warning').toggleClass('hidden', ok);
+                })
+                .on('form:submit', function() {
+                    return true; // Don't submit form for this demo
+                });
+            });
+        </script>
     </body>
 </html>
