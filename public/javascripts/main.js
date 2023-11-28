@@ -1,6 +1,7 @@
+import { Validator, enLang as en } from '@upjs/facile-validator';
 console.log('in main.js')
+
 function main () {
-  import { Validator, enLang as en } from '@upjs/facile-validator';
 
   // Select the container element that contains the fields
   const form = document.querySelector('form');
