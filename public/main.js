@@ -1,4 +1,4 @@
-//import { Validator, enLang as en } from '/@upjs/facile-validator';
+import { Validator, enLang as en } from '../node_modules/@upjs/facile-validator';
 console.log('in main.js')
 
   // Select the container element that contains the fields
@@ -6,7 +6,7 @@ console.log('in main.js')
 
   // Create an instance of Validator for the container element
   const v = new Validator(form, {
-    lang: enLang,
+    lang: en,
   });
 
   form.addEventListener('submit', (e) => {
