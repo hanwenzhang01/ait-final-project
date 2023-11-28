@@ -5,25 +5,29 @@
     </head>
 
     <body>
-        <script type="module" src="/main.js"></script>
+        <script type="module" src="/movie.js"></script>
         <form action="" method="POST">
             <h4>title:</h4>
             <input 
+                id="title"
                 type="text"
                 name="title" 
                 placeholder="title"
-                data-rules="required"/>
+                required=""/>
             <br>
             
             <h4>year:</h4>
             <input
+                id="year"
+                type="int"
                 name="year"
                 placeholder="release year"
-                data-rules="int|between:1888,2023|required"/>
+                required=""
+                <!--data-rules="int|between:1888,2023|required"-->/>
             <br>
 
             <h4>review, in stars:</h4>
-                <select name="stars">
+                <select name="stars" id="stars">
                     <option value=""></option>
                     <option value="★★★★★">★★★★★</option>
                     <option value="★★★★">★★★★</option>
@@ -35,13 +39,14 @@
 
             <h4>review, in words:</h4>
             <textarea 
+                id="review"
                 name="review" 
                 placeholder="ur review">
             </textarea>
             <br>
 
             <h4>maturity rating:</h4>
-            <select name="rating">
+            <select name="rating" id="rating">
                 <option value=""></option>
                 <option value="G">G: general audiences</option>
                 <option value="PG">PG: parental guidance suggested</option>
@@ -54,12 +59,13 @@
 
             <h4>genre:</h4>
             <input
+                id="genre"
                 type="text"
                 name="genre"
                 placeholder="genre"/>
             <br>
             <br>
-            <input type="submit" value="submit" />
+            <input type="submit" value="submit" id="submitButton"/>
         </form>
     </body>
 </html>
