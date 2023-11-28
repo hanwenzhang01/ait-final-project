@@ -1,5 +1,4 @@
 //import { Validator, enLang as en } from '/@upjs/facile-validator';
-const { Validator, enLang} = require('@upjs/facile-validator');
 console.log('in main.js')
 
   // Select the container element that contains the fields
