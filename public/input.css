@@ -14,17 +14,20 @@ h3 {
     @apply text-xl font-bold text-center text-slate-800;
 }
 
+header {
+    @apply py-8;
+}
+
 body {
     @apply bg-gray-300;
 }
 
 nav {
-    @apply float-left;
+    @apply block float-left w-full;
 }
 
 nav ul {
-    @apply items-center justify-center list-none;
-    @apply w-1/2;
+    @apply justify-center list-none;
 }
 
 nav ul li {
@@ -32,7 +35,7 @@ nav ul li {
 }
 
 nav li a {
-    @apply px-4 py-2 text-slate-800 bg-white w-max;
+    @apply px-4 py-2 text-slate-800 bg-white;
 }
 
 nav li a:hover {
