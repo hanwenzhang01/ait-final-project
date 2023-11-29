@@ -9,9 +9,9 @@ const v = new Validator(form, {
   lang: en,
 });
 
-form.addEventListener('submit', () => {
+form.addEventListener('submit', (event) => {
   // Call validate method to start validation
-  form.preventDefault();
+  event.preventDefault();
   v.validate();
 });
 
