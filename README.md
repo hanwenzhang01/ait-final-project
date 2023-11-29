@@ -101,15 +101,14 @@ as a user, I can...
 # TODO: UPDATE RESEARCH TOPICS
 ## Research Topics
 
-* (3 points) Perform client side form validation using custom JavaScript or JavaScript library
+* (3 points) Perform client side form validation using facile JavaScript library
     * will validate user input before the form is submitted
     * will only allow valid inputs to be submitted and tell users how to format their input
-    * use: parsley library
-* (2 points) Use a CSS framework or UI toolkit, with reasonable customization of the framework:
+* (2) points) Use a CSS framework or UI toolkit, with reasonable customization of the framework:
   * will improve the appearance of the website
   * will make it easier to style the website for a more modern look
   * probably semantic UI: tailwind.css, Semantic UI, Bootstrap
-* (2 points) SweetAlert - promise based js library for pop-ups
+* (3 points) SweetAlert - promise based js library for pop-ups
   * used to alert the user about invalid inputs
 * (2 point) anime.js - js animation library
   * used for animated background (fire + fireplace)

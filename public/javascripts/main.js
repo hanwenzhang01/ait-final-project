@@ -11,6 +11,7 @@ const v = new Validator(form, {
 
 form.addEventListener('submit', () => {
   // Call validate method to start validation
+  e.preventDefault();
   v.validate();
 });
 
@@ -19,10 +20,10 @@ form.addEventListener('submit', () => {
 v.on('validation:success', () => {
   //alert('Nice! The form was validated without any errors');
   console.log('Nice! The form was validated without any errors');
+  document.getElementById("form").submit();
 });
 
 // Handle failed validation
 v.on('validation:failed', () => {
-  e.preventDefault();
   alert('Oops! There are some errors in the form.');
 });
