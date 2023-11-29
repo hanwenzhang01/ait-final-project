@@ -572,7 +572,6 @@ h1 {
 
 h2 {
   text-align: left;
-  text-align: center;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
@@ -590,8 +589,8 @@ h3 {
 }
 
 header {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 body {
@@ -603,6 +602,7 @@ nav {
   float: left;
   display: block;
   width: 100%;
+  padding-bottom: 0.5rem;
 }
 
 nav ul {
