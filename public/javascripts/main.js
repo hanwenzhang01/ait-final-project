@@ -1,4 +1,4 @@
-import express from '../express';
+//import express from '../express';
 import { Validator, enLang as en } from '../facile-validator/dist/index.mjs';
 
 // Select the container element that contains the fields
@@ -11,7 +11,7 @@ const v = new Validator(form, {
 
 form.addEventListener('submit', () => {
   // Call validate method to start validation
-  express.preventDefault();
+  form.preventDefault();
   v.validate();
 });
 
