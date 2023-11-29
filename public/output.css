@@ -594,8 +594,11 @@ body {
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
+nav {
+  float: left;
+}
+
 nav ul {
-  display: inline;
   list-style-type: none;
   align-items: center;
   justify-content: center;
@@ -603,6 +606,7 @@ nav ul {
 }
 
 nav ul li {
+  display: inline;
   text-align: center;
   font-size: 1.5rem;
   line-height: 2rem;
