@@ -15,19 +15,17 @@ h3 {
 }
 
 nav ul {
-    @apply inline-block flex-row items-center justify-center;
     @apply w-1/2;
-    @apply text-2xl font-bold text-center text-slate-800;
     @apply list-none;
+}
+
+nav ul li {
+    @apply inline-block flex-row items-center justify-center;
+    @apply text-2xl font-bold text-center text-slate-800;
 }
 
 nav li a:hover {
     @apply bg-gray-300;
-    @apply text-white;
-}
-
-nav .active {
-    @apply bg-cyan-500;
     @apply text-white;
 }
 
