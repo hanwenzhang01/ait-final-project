@@ -7,26 +7,24 @@ h1{
 }
 
 h2 {
-    @apply text-2xl font-bold text-center text-slate-800;
+    @apply text-left text-2xl font-bold text-center text-slate-800;
 }
 
 h3 {
     @apply text-xl font-bold text-center text-slate-800;
 }
 
-nav ul {
-    @apply flex-row items-center justify-center;
+ul {
+    @apply flex-row items-center justify-center list-none;
     @apply w-1/2;
-    @apply list-none;
 }
 
-nav ul li a {
-    @apply inline-block;
+ul li {
     @apply text-2xl font-bold text-center text-slate-800;
 }
 
 nav li a:hover {
-    @apply bg-gray-300;
+    @apply bg-slate-800;
     @apply text-white;
 }
 
