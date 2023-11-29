@@ -44,11 +44,12 @@
             <br>
 
             <h4>publication year:</h4>
+            <div id="bookYear">
             <input 
-                type="text" 
                 name="year" 
                 placeholder="year"
-                data-rules="regex:/^[1-2023]|[1-3500]BC|[1-2023]AD"/>
+                data-rules="int|between:1,2023"/>
+            </div>
             <br>
 
             <h4>genre:</h4>
