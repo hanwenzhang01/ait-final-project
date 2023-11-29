@@ -15,7 +15,7 @@ h3 {
 }
 
 nav ul {
-    @apply inline-block flex-col items-center justify-center;
+    @apply inline-block flex-row items-center justify-center;
     @apply w-1/2;
     @apply text-2xl font-bold text-center text-slate-800;
     @apply list-none;
