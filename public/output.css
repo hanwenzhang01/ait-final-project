@@ -571,6 +571,8 @@ h1 {
 }
 
 h2 {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
   text-align: left;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -602,7 +604,7 @@ nav {
   float: left;
   display: block;
   width: 100%;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
 }
 
 nav ul {
