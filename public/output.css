@@ -589,7 +589,8 @@ h3 {
   color: rgb(30 41 59 / var(--tw-text-opacity));
 }
 
-ul {
+nav ul {
+  display: flex;
   list-style-type: none;
   flex-direction: row;
   align-items: center;
@@ -602,6 +603,15 @@ ul li {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(30 41 59 / var(--tw-text-opacity));
+}
+
+nav li a {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   --tw-text-opacity: 1;
   color: rgb(30 41 59 / var(--tw-text-opacity));
 }
