@@ -571,6 +571,7 @@ h1 {
 }
 
 h2 {
+  text-align: left;
   text-align: center;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -588,16 +589,15 @@ h3 {
   color: rgb(30 41 59 / var(--tw-text-opacity));
 }
 
-nav ul {
+ul {
+  list-style-type: none;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 50%;
-  list-style-type: none;
 }
 
-nav ul li a {
-  display: inline-block;
+ul li {
   text-align: center;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -608,7 +608,7 @@ nav ul li a {
 
 nav li a:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
