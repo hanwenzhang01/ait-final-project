@@ -14,6 +14,10 @@ h3 {
     @apply text-xl font-bold text-center text-slate-800;
 }
 
+h4 {
+    @apply text-lg font-bold text-center text-slate-800;
+}
+
 header {
     @apply py-6;
 }
@@ -30,8 +34,16 @@ body {
     @apply border-4 border-solid border-off-white ml-2 mb-2;
 }
 
+form {
+    @apply ml-2 mb-2;
+}
+
+table {
+    @apply ml-2;
+}
+
 nav {
-    @apply pl-8 block float-left w-full pb-8;
+    @apply ml-8 block float-left w-full mb-8;
 }
 
 nav ul {
