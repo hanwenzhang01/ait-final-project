@@ -27,11 +27,7 @@ body {
 }
 
 .tables {
-    @apply border-4 border-solid border-off-white;
-}
-
-.tableData {
-    @apply pl-2;
+    @apply border-4 border-solid border-off-white ml-2 mb-2;
 }
 
 nav {
