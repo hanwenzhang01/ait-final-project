@@ -573,7 +573,7 @@ h1 {
 h2 {
   padding-top: 0.5rem;
   padding-bottom: 0.25rem;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   text-align: left;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -612,6 +612,10 @@ body {
   border-style: solid;
   --tw-border-opacity: 1;
   border-color: rgb(248 249 250 / var(--tw-border-opacity));
+}
+
+.tableData {
+  padding-left: 0.5rem;
 }
 
 nav {

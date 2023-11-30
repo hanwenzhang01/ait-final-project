@@ -7,7 +7,7 @@ h1{
 }
 
 h2 {
-    @apply pt-2 pb-1 pl-4 text-left text-2xl font-bold text-slate-800;
+    @apply pt-2 pb-1 pl-2 text-left text-2xl font-bold text-slate-800;
 }
 
 h3 {
@@ -28,6 +28,10 @@ body {
 
 .tables {
     @apply border-4 border-solid border-off-white;
+}
+
+.tableData {
+    @apply pl-2;
 }
 
 nav {

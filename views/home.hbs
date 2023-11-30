@@ -46,6 +46,7 @@
         <div class="tables">
             <h2>movies</h2>
             <table>
+                <div class="tableData">
                     <tr>
                         <th>title</th>
                         <th>year</th>
@@ -80,46 +81,49 @@
                         {{/if}}
                     </tr>
                     {{/each}}
+                </div>
             </table>
         </div>
 
         <div class="tables">
             <h2>albums</h2>
             <table>
-                <tr>
-                    <th>title</th>
-                    <th>artist</th>
-                    <th>review</th>
-                    <th>stars</th>
-                    <th>year</th>
-                    <th>genre</th>
-                </tr>
-                {{#each albums as |album|}}
-                <tr>
-                    <td>{{album.title}}</td>
-                    <td>{{album.artist}}</td>
-                    {{#if album.stars}}
-                        <td>{{album.stars}}</td>
-                    {{else}}
-                        <td></td>
-                    {{/if}}
-                    {{#if album.review}}
-                        <td>{{album.review}}</td>
-                    {{else}}
-                        <td></td>
-                    {{/if}}
-                    {{#if album.year}}
-                        <td>{{album.year}}</td>
-                    {{else}}
-                        <td></td>
-                    {{/if}}
-                    {{#if album.genre}}
-                        <td>{{album.genre}}</td>
-                    {{else}}
-                        <td></td>
-                    {{/if}}
-                </tr>
-                {{/each}}
+                <div class="tableData">
+                    <tr>
+                        <th>title</th>
+                        <th>artist</th>
+                        <th>review</th>
+                        <th>stars</th>
+                        <th>year</th>
+                        <th>genre</th>
+                    </tr>
+                    {{#each albums as |album|}}
+                    <tr>
+                        <td>{{album.title}}</td>
+                        <td>{{album.artist}}</td>
+                        {{#if album.stars}}
+                            <td>{{album.stars}}</td>
+                        {{else}}
+                            <td></td>
+                        {{/if}}
+                        {{#if album.review}}
+                            <td>{{album.review}}</td>
+                        {{else}}
+                            <td></td>
+                        {{/if}}
+                        {{#if album.year}}
+                            <td>{{album.year}}</td>
+                        {{else}}
+                            <td></td>
+                        {{/if}}
+                        {{#if album.genre}}
+                            <td>{{album.genre}}</td>
+                        {{else}}
+                            <td></td>
+                        {{/if}}
+                    </tr>
+                    {{/each}}
+                </div>
             </table>
         </div>
     </div>
