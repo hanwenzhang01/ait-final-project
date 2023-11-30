@@ -123,9 +123,9 @@ as a user, I can...
 
 ## Annotations / References Used
 
-1. [parsley site](https://parsleyjs.org/)
-2. [semantic UI site](https://semantic-ui.com/)
-3. [semantic UI default theme example](https://semantic-ui-forest.com/themes/semantic-ui/v2/material)
+1. [facile github reference](https://github.com/upjs/facile-validator/tree/main#accepted)
+2. [tailwind site](https://tailwindcss.com/docs/installation)
+
 4. [SweetAlert site](https://sweetalert2.github.io/)
 5. [anime.js github](https://github.com/juliangarnier/anime/#getting-started)
 6. [anime.js fireplace](https://codepen.io/cweachock/pen/rNxjRbd)

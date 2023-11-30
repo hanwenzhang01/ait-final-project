@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path';
 import './config.mjs';
 import { fileURLToPath } from 'url';
-import Swal from 'sweetalert2';
+import Swal from '../sweetalert2';
 
 
 const app = express();
@@ -73,37 +73,40 @@ function filterBooks(req) {
     return filterObj;
   }
   */
- /*
+ 
   async function deleteAll() {
     await Book.deleteMany({});
     await Movie.deleteMany({});
     await Album.deleteMany({});
-  }*/
+  }
 
   app.get('/delete', async(req,res) => {
-    /*Swal.fire({
-      title: 'Do you want to save the changes?',
-      showDenyButton: true,
-      showCancelButton: true,
-      confirmButtonText: 'Yes',
-      denyButtonText: 'No',
-      customClass: {
-        actions: 'my-actions',
-        cancelButton: 'order-1 right-gap',
-        confirmButton: 'order-2',
-        denyButton: 'order-3',
-      },
-    }).then(result => {
-      if (result.isConfirmed) {
-        Swal.fire('Saved!', '', 'success');
-        deleteAll();
-      } else if (result.isDenied) {
-        Swal.fire('Changes are not saved', '', 'info');
-      }
-    });*/
+    //document.addEventListener("load", function(){
+      Swal.fire({
+        title: "Are you sure you want to clear your shelf?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          deleteAll();
+          Swal.fire({
+            title: "Deleted!",
+            text: "Your file has been deleted.",
+            icon: "success"
+          });
+        }
+      });
+    //});
+
+    
+    /*
     await Book.deleteMany({});
     await Movie.deleteMany({});
-    await Album.deleteMany({});
+    await Album.deleteMany({});*/
     res.redirect('/');
   });
 
@@ -160,7 +163,7 @@ function filterBooks(req) {
   });
 
   app.post('/addAlbum', async (req, res) => {
-    console.log('start of post')
+    console.log('start of post');
     const album = new Album({
       title: req.body.title.trim(),
       artist: req.body.artist.trim(),
@@ -171,9 +174,9 @@ function filterBooks(req) {
       genre: req.body.genre.trim()
     });
     //req.session.albums.push(album);
-    console.log('before push')
+    console.log('before push');
     albumsArr.push(album);
-    console.log('before save')
+    console.log('before save');
     await album.save();
     console.log('before redirect');
     res.redirect('/');
