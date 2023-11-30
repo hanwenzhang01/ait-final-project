@@ -600,11 +600,16 @@ body {
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
+.media {
+  padding-left: 2rem;
+}
+
 nav {
   float: left;
   display: block;
   width: 100%;
-  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
 }
 
 nav ul {
