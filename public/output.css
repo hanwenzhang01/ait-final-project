@@ -572,7 +572,7 @@ h1 {
 
 h2 {
   padding-top: 1.5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.25rem;
   text-align: left;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -597,11 +597,18 @@ header {
 
 body {
   --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+  background-color: rgb(211 220 230 / var(--tw-bg-opacity));
 }
 
 .media {
   padding-left: 2rem;
+}
+
+.tables {
+  border-width: 4px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(248 249 250 / var(--tw-border-opacity));
 }
 
 nav {
@@ -629,7 +636,7 @@ nav ul li {
 
 nav li a {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(248 249 250 / var(--tw-bg-opacity));
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
@@ -642,7 +649,7 @@ nav li a:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(248 249 250 / var(--tw-text-opacity));
 }
 
 input {
@@ -656,7 +663,7 @@ input {
   --tw-border-opacity: 1;
   border-color: rgb(203 213 225 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(248 249 250 / var(--tw-bg-opacity));
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;

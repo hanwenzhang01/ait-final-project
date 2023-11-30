@@ -7,7 +7,7 @@ h1{
 }
 
 h2 {
-    @apply pt-6 pb-4 text-left text-2xl font-bold text-slate-800;
+    @apply pt-6 pb-1 text-left text-2xl font-bold text-slate-800;
 }
 
 h3 {
@@ -19,11 +19,15 @@ header {
 }
 
 body {
-    @apply bg-gray-300;
+    @apply bg-gray-light;
 }
 
 .media {
     @apply pl-8;
+}
+
+.tables {
+    @apply border-4 border-solid border-off-white;
 }
 
 nav {
@@ -35,18 +39,17 @@ nav ul {
 }
 
 nav ul li {
-    @apply inline text-2xl font-bold text-center text-slate-800 ;
+    @apply inline text-2xl font-bold text-center text-slate-800;
 }
 
 nav li a {
-    @apply px-4 py-2 text-slate-800 bg-white;
+    @apply px-4 py-2 text-slate-800 bg-off-white;
 }
 
 nav li a:hover {
-    @apply bg-slate-800;
-    @apply text-white;
+    @apply bg-slate-800 text-off-white;
 }
 
 input {
-    @apply block w-full px-4 py-2 text-slate-800 bg-white border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-cyan-500 focus:border-cyan-500;
+    @apply block w-full px-4 py-2 text-slate-800 bg-off-white border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-cyan-500 focus:border-cyan-500;
 }

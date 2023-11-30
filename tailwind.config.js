@@ -22,6 +22,7 @@ module.exports = {
       'slate-800': 'rgb(30 41 59)', 
       'gray-300': 'rgb(203 213 225)',
       'white': '#fff', 
+      'off-white': '#f8f9fa',
       'cyan-500': 'rgb(6 182 212)'
     },
     fontFamily: {
