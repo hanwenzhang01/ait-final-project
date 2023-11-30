@@ -4,80 +4,82 @@
         <div class="tables">
             <h2>books</h2>
             <table>
-                <tr>
-                    <th>author</th>
-                    <th>title</th>
-                    <th>review</th>
-                    <th>stars</th>
-                    <th>year</th>
-                    <th>genre</th>
-                </tr>
-                {{#each books as |book|}}
-                <tr>
-                    <td>{{book.author}}</td>
-                    <td>{{book.title}}</td>
-                    {{#if book.review}}
-                        <td>{{book.review}}</td>
-                    {{else}}
-                        <td></td>
-                    {{/if}}
-                    {{#if book.stars}}
-                        <td>{{book.stars}}</td>
-                    {{else}}
-                        <td></td>
-                    {{/if}}
-                    {{#if book.year}}
-                        <td>{{book.year}}</td>
-                    {{else}}
-                        <td></td>
-                    {{/if}}
-                    {{#if book.genre}}
-                        <td>{{book.genre}}</td>
-                    {{else}}
-                        <td></td>
-                    {{/if}}
-                </tr>
-                {{/each}}
+                <div class="tableData">
+                    <tr>
+                        <th>author</th>
+                        <th>title</th>
+                        <th>review</th>
+                        <th>stars</th>
+                        <th>year</th>
+                        <th>genre</th>
+                    </tr>
+                    {{#each books as |book|}}
+                    <tr>
+                        <td>{{book.author}}</td>
+                        <td>{{book.title}}</td>
+                        {{#if book.review}}
+                            <td>{{book.review}}</td>
+                        {{else}}
+                            <td></td>
+                        {{/if}}
+                        {{#if book.stars}}
+                            <td>{{book.stars}}</td>
+                        {{else}}
+                            <td></td>
+                        {{/if}}
+                        {{#if book.year}}
+                            <td>{{book.year}}</td>
+                        {{else}}
+                            <td></td>
+                        {{/if}}
+                        {{#if book.genre}}
+                            <td>{{book.genre}}</td>
+                        {{else}}
+                            <td></td>
+                        {{/if}}
+                    </tr>
+                    {{/each}}
+                </div>
             </table>
         </div>
 
         <div class="tables">
             <h2>movies</h2>
             <table>
-                <tr>
-                    <th>title</th>
-                    <th>year</th>
-                    <th>review</th>
-                    <th>stars</th>
-                    <th>rating</th>
-                    <th>genre</th>
-                </tr>
-                {{#each movies as |movie|}}
-                <tr>
-                    <td>{{movie.title}}</td>
-                    <td>{{movie.year}}</td>
-                    {{#if movie.review}}
-                        <td>{{movie.review}}</td>
-                    {{else}}
-                        <td></td>
-                    {{/if}}
-                    {{#if movie.stars}}
-                        <td>{{movie.stars}}</td>
-                    {{else}}
-                        <td></td>
-                    {{/if}}
-                    {{#if movie.rating}}
-                        <td>{{movie.rating}}</td>
-                    {{else}}
-                        <td></td>
-                    {{/if}}
-                    {{#if movie.genre}}
-                        <td>{{movie.genre}}</td>
-                    {{else}}
-                        <td></td>
-                    {{/if}}
-                </tr>
-                {{/each}}
+                    <tr>
+                        <th>title</th>
+                        <th>year</th>
+                        <th>review</th>
+                        <th>stars</th>
+                        <th>rating</th>
+                        <th>genre</th>
+                    </tr>
+                    {{#each movies as |movie|}}
+                    <tr>
+                        <td>{{movie.title}}</td>
+                        <td>{{movie.year}}</td>
+                        {{#if movie.review}}
+                            <td>{{movie.review}}</td>
+                        {{else}}
+                            <td></td>
+                        {{/if}}
+                        {{#if movie.stars}}
+                            <td>{{movie.stars}}</td>
+                        {{else}}
+                            <td></td>
+                        {{/if}}
+                        {{#if movie.rating}}
+                            <td>{{movie.rating}}</td>
+                        {{else}}
+                            <td></td>
+                        {{/if}}
+                        {{#if movie.genre}}
+                            <td>{{movie.genre}}</td>
+                        {{else}}
+                            <td></td>
+                        {{/if}}
+                    </tr>
+                    {{/each}}
             </table>
         </div>
 

@@ -571,8 +571,9 @@ h1 {
 }
 
 h2 {
-  padding-top: 1.5rem;
+  padding-top: 0.5rem;
   padding-bottom: 0.25rem;
+  padding-left: 1rem;
   text-align: left;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -601,7 +602,9 @@ body {
 }
 
 .media {
+  display: block;
   padding-left: 2rem;
+  padding-top: 4rem;
 }
 
 .tables {
