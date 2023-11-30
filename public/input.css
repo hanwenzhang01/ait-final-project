@@ -15,11 +15,11 @@ h3 {
 }
 
 h4 {
-    @apply pl-2 text-lg font-bold text-left text-slate-800;
+    @apply pl-1 text-lg text-left text-slate-800;
 }
 
 h6 {
-    @apply pl-2 text-sm font-bold text-left text-red-500;
+    @apply pl-2 pb-4 text-sm font-bold text-left text-red-500;
 }
 
 header {
