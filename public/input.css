@@ -15,7 +15,11 @@ h3 {
 }
 
 h4 {
-    @apply text-lg font-bold text-center text-slate-800;
+    @apply pl-2 text-lg font-bold text-left text-slate-800;
+}
+
+h6 {
+    @apply pl-2 text-sm font-bold text-left text-red-500;
 }
 
 header {
@@ -64,4 +68,8 @@ nav li a:hover {
 
 input {
     @apply block w-full px-4 py-2 text-slate-800 bg-off-white border border-gray-300 rounded-md shadow-sm appearance-none focus:outline-none focus:ring-cyan-500 focus:border-cyan-500;
+}
+
+.submitButton {
+    @apply bg-gray hover:bg-gray-dark text-off-white font-bold py-2 px-4 rounded;
 }

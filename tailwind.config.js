@@ -23,7 +23,8 @@ module.exports = {
       'gray-300': 'rgb(203 213 225)',
       'white': '#fff', 
       'off-white': '#f8f9fa',
-      'cyan-500': 'rgb(6 182 212)'
+      'cyan-500': 'rgb(6 182 212)',
+      'red-500': 'rgb(200 68 68)'
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
