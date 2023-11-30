@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path';
 import './config.mjs';
 import { fileURLToPath } from 'url';
-import Swal from '../sweetalert2';
+import Swal from 'sweetalert2';
 
 
 const app = express();
