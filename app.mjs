@@ -82,6 +82,7 @@ function filterBooks(req) {
 
   app.get('/delete', async(req,res) => {
     //document.addEventListener("load", function(){
+      console.log("delete button clicked")
       const swal = await(Swal.fire({
         title: "Are you sure you want to clear your shelf?",
         text: "You won't be able to revert this!",
@@ -90,8 +91,10 @@ function filterBooks(req) {
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
         confirmButtonText: "Yes, delete it!"
-      }))
-      
+      }));
+
+      console.log("swal: ", swal)
+
       swal.then((result) => {
         if (result.isConfirmed) {
           deleteAll();
@@ -104,7 +107,7 @@ function filterBooks(req) {
       });
     //});
 
-    
+    console.log('before redirect')
     /*
     await Book.deleteMany({});
     await Movie.deleteMany({});
