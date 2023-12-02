@@ -54,11 +54,19 @@ nav ul {
     @apply justify-center list-none;
 }
 
-nav ul li {
+nav ul li a {
     @apply px-4 py-2 inline text-2xl font-bold text-center text-slate-800 bg-off-white;
 }
 
-nav li:hover {
+nav li a:hover {
+    @apply bg-slate-800 text-off-white;
+}
+
+nav ul li  button{
+    @apply px-4 py-2 inline text-2xl font-bold text-center text-slate-800 bg-off-white;
+}
+
+nav li button:hover {
     @apply bg-slate-800 text-off-white;
 }
 
