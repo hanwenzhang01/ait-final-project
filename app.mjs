@@ -27,29 +27,6 @@ const Album = mongoose.model('Album');
 // body parser (req.body)
 app.use(express.urlencoded({ extended: false }));
 
-/*
-// session stuff
-const sessionOptions = { 
-	secret: 'session id secret 123', 
-	saveUninitialized: false, 
-	resave: false
-};
-app.use(session(sessionOptions));
-app.use(function(req, res, next){
-  //storing session books
-  req.session.books = req.session.books || [];
-  res.locals.books = req.session.books;
-
-  //storing session movies
-  req.session.movies = req.session.movies || [];
-  res.locals.movies = req.session.movies;
-
-  //storing session albums
-  req.session.albums = req.session.albums || [];
-  res.locals.albums = req.session.albums;
-  next();
-});
-*/
 const booksArr = [];
 const moviesArr = [];
 const albumsArr = [];
@@ -80,42 +57,6 @@ function filterBooks(req) {
     await Album.deleteMany({});
   }
 
-  app.get('/delete', async(req,res) => {
-    //document.addEventListener("load", function(){
-      console.log("delete button clicked")
-      console.log(typeof Swal.fire)
-      const swal = Swal.fire({
-        title: "Are you sure you want to clear your shelf?",
-        text: "You won't be able to revert this!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, delete it!"
-      });
-
-      console.log("swal: ", swal)
-
-      swal.then((result) => {
-        if (result.isConfirmed) {
-          deleteAll();
-          Swal.fire({
-            title: "Deleted!",
-            text: "Your file has been deleted.",
-            icon: "success"
-          });
-        }
-      });
-    //});
-
-    console.log('before redirect')
-    /*
-    await Book.deleteMany({});
-    await Movie.deleteMany({});
-    await Album.deleteMany({});*/
-    res.redirect('/');
-  });
-
   app.get('/', async (req, res) => {
     const books = await Book.find();
     const movies = await Movie.find();
@@ -126,7 +67,6 @@ function filterBooks(req) {
   app.post('/', async (req, res) => {
     console.log('req.body: ',req.body);
     if(req.body.delete == "yes"){
-      console.log("delete button clicked")
       await deleteAll();
     }
     res.redirect('/');
@@ -147,7 +87,6 @@ function filterBooks(req) {
       genre: req.body.genre.trim()
     });
     //hi lol
-    //req.session.books.push(book);
     booksArr.push(book);
     await book.save();
     res.redirect('/');
@@ -177,7 +116,6 @@ function filterBooks(req) {
   });
 
   app.post('/addAlbum', async (req, res) => {
-    console.log('start of post');
     const album = new Album({
       title: req.body.title.trim(),
       artist: req.body.artist.trim(),
@@ -187,12 +125,8 @@ function filterBooks(req) {
       year: req.body.year,
       genre: req.body.genre.trim()
     });
-    //req.session.albums.push(album);
-    console.log('before push');
     albumsArr.push(album);
-    console.log('before save');
     await album.save();
-    console.log('before redirect');
     res.redirect('/');
   });
   
