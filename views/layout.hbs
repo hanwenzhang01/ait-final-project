@@ -3,6 +3,9 @@
     <head>
         <title>my media shelf</title>
 		<link rel="stylesheet" href="/output.css" type="text/css" media="screen" title="no title" charset="utf-8">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script type="module" src="/javascripts/layout.js"></script>
+        <!-- <script src="sweetalert2.all.min.js"></script> -->
     </head>
     <body>
         <header>
@@ -15,7 +18,7 @@
                 <li><a href="/addBook">add a book</a></li>
                 <li><a href="/addMovie">add a movie</a></li>
                 <li><a href="/addAlbum">add an album</a></li>
-                <li><a href="/delete">clear shelf</a></li>
+                <li><button type="submit" id="delete" value="no">clear shelf</button></li>
             </ul>	
 	    </nav>
         {{{body}}}

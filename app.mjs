@@ -83,7 +83,8 @@ function filterBooks(req) {
   app.get('/delete', async(req,res) => {
     //document.addEventListener("load", function(){
       console.log("delete button clicked")
-      const swal = await(Swal.fire({
+      console.log(typeof Swal.fire)
+      const swal = Swal.fire({
         title: "Are you sure you want to clear your shelf?",
         text: "You won't be able to revert this!",
         icon: "warning",
@@ -91,7 +92,7 @@ function filterBooks(req) {
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
         confirmButtonText: "Yes, delete it!"
-      }));
+      });
 
       console.log("swal: ", swal)
 
@@ -119,6 +120,10 @@ function filterBooks(req) {
     const books = await Book.find();
     const movies = await Movie.find();
     const albums = await Album.find();
+    if(req.body.delete == "yes"){
+      console.log("delete button clicked")
+      await deleteAll();
+    }
     res.render('home', {books, movies, albums});
   });
 
