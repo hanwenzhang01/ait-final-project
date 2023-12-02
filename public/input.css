@@ -62,6 +62,10 @@ nav li:hover {
     @apply bg-slate-800 text-off-white;
 }
 
+#deleteForm {
+    @apply inline;
+}
+
 #delete {
     @apply hidden;
 }

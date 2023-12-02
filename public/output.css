@@ -681,6 +681,10 @@ nav li:hover {
   color: rgb(248 249 250 / var(--tw-text-opacity));
 }
 
+#deleteForm {
+  display: inline;
+}
+
 #delete {
   display: none;
 }

@@ -167,7 +167,6 @@ function filterBooks(req) {
       rating: req.body.rating,
       genre: req.body.genre.trim()
     });
-    //req.session.movies.push(movie);
     moviesArr.push(movie);
     await movie.save();
     res.redirect('/');
