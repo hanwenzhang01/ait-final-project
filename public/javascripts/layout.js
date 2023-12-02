@@ -1,4 +1,4 @@
-const deleteButton = document.getElementById("delete");
+const deleteButton = document.getElementById("deleteButton");
 const form = document.getElementById("deleteForm");
 
 deleteButton.addEventListener("click", function (){
