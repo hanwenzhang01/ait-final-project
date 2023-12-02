@@ -120,12 +120,16 @@ function filterBooks(req) {
     const books = await Book.find();
     const movies = await Movie.find();
     const albums = await Album.find();
-    console.log(req.body);
+    res.render('home', {books, movies, albums});
+  });
+
+  app.post('/', async (req, res) => {
+    console.log('req.body: ',req.body);
     if(req.body.delete == "yes"){
       console.log("delete button clicked")
       await deleteAll();
     }
-    res.render('home', {books, movies, albums});
+    res.redirect('/');
   });
 
   app.get('/addBook', async (req, res) => {
