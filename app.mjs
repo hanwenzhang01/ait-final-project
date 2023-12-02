@@ -120,6 +120,7 @@ function filterBooks(req) {
     const books = await Book.find();
     const movies = await Movie.find();
     const albums = await Album.find();
+    console.log(req.body);
     if(req.body.delete == "yes"){
       console.log("delete button clicked")
       await deleteAll();
