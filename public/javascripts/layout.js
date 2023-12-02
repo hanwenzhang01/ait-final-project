@@ -12,7 +12,7 @@ deleteButton.addEventListener("click", function (){
         confirmButtonText: "Yes, delete it!"
     }).then((result) => {
         if (result.isConfirmed) {
-        deleteButton.value="yes";
+        document.getElementById('delete').value="yes";
         console.log('submitting form')
         form.submit();
         Swal.fire({
