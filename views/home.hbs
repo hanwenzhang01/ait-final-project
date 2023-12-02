@@ -18,7 +18,7 @@
             </ul>	
 	    </nav>
     </header>
-    
+
     <div class="media">
         <div class="tables">
             <h2>books</h2>
@@ -115,13 +115,13 @@
                 <tr>
                     <td>{{album.title}}</td>
                     <td>{{album.artist}}</td>
-                    {{#if album.stars}}
-                        <td>{{album.stars}}</td>
+                    {{#if album.review}}
+                        <td>{{album.review}}</td>
                     {{else}}
                         <td></td>
                     {{/if}}
-                    {{#if album.review}}
-                        <td>{{album.review}}</td>
+                    {{#if album.stars}}
+                        <td>{{album.stars}}</td>
                     {{else}}
                         <td></td>
                     {{/if}}
