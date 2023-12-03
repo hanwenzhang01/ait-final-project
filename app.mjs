@@ -2,8 +2,6 @@ import express from 'express';
 import path from 'path';
 import './config.mjs';
 import { fileURLToPath } from 'url';
-import Swal from 'sweetalert2';
-
 
 const app = express();
 //import session from 'express-session';
@@ -65,11 +63,24 @@ function filterBooks(req) {
   });
 
   app.post('/', async (req, res) => {
-    console.log('req.body: ',req.body);
-    if(req.body.delete == "yes"){
+    if(req.body.delete === "yes"){
       await deleteAll();
     }
     res.redirect('/');
+  });
+
+  app.get('/favorites', (req,res) => {
+    const favBooks = booksArr.filter(book => book.stars >= 4);
+    const favMovies = moviesArr.filter(movie => movie.stars >= 4);
+    const favAlbums = albumsArr.filter(album => album.stars >= 4);
+    res.render('home', {favBooks, favMovies, favAlbums});
+  });
+
+  app.get('recents', (req,res) => {
+    const recentBooks = booksArr.filter(book => book.year === 2023);
+    const recentMovies = moviesArr.filter(movie => movie.year === 2023);
+    const recentAlbums = albumsArr.filter(album => album.year === 2023);
+    res.render('home', {recentBooks, recentMovies, recentAlbums});
   });
 
   app.get('/addBook', async (req, res) => {

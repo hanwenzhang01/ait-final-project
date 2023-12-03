@@ -60,7 +60,7 @@ An Example Album:
 
 ## [Link to Commented First Draft Schema](db.mjs) 
 
-# __WILL DO: UPDATE WIREFRAMES__
+# __TO DO: UPDATE WIREFRAMES__
 ## Wireframes
 
 /home - homepage
@@ -84,37 +84,30 @@ An Example Album:
 /albums - see all albums
 <!--![list](documentation/allShelf.png)-->
 
-# __WILL DO: UPDATE SITE MAP__
+#  __TO DO: UPDATE SITE MAP__
 ## Site map
 <!--![list create](documentation/siteMap.png)-->
 
 ## User Stories
 as a user, I can...
 * see all my media elements and their information on my home page
-* see all my books on one page
-* see all my movies on one page
-* see all my albums on one page
 * add a new book to my shelf
 * add a new movie to my shelf
 * add a new album to my shelf
+* delete all shelf entries
 
 # TODO: UPDATE RESEARCH TOPICS
 ## Research Topics
 
-* (3 points) Perform client side form validation using facile JavaScript library
+* (3 points) Perform client side form validation using facile (JavaScript library)
     * will validate user input before the form is submitted
     * will only allow valid inputs to be submitted and tell users how to format their input
-* (2) points) Use a CSS framework or UI toolkit, with reasonable customization of the framework:
+* (2 points) Use tailwind.css, with reasonable customization of the framework:
   * will improve the appearance of the website
   * will make it easier to style the website for a more modern look
-  * probably semantic UI: tailwind.css, Semantic UI, Bootstrap
-* (3 points) SweetAlert - promise based js library for pop-ups
+* (2 points) SweetAlert - promise based js library for pop-ups
   * used to alert the user about invalid inputs
-* (2 point) anime.js - js animation library
-  * used for animated background (fire + fireplace)
-* (1 point) feather icon collection - for icons
-  * used for books, music, movie icons
-  * among other icons
+* (3 points) dotenv
 
 10 points total out of 10 required points
 
@@ -124,12 +117,5 @@ as a user, I can...
 ## Annotations / References Used
 
 1. [facile github reference](https://github.com/upjs/facile-validator/tree/main#accepted)
-2. [tailwind site](https://tailwindcss.com/docs/installation)
-
-4. [SweetAlert site](https://sweetalert2.github.io/)
-5. [anime.js github](https://github.com/juliangarnier/anime/#getting-started)
-6. [anime.js fireplace](https://codepen.io/cweachock/pen/rNxjRbd)
-7. [feather site](https://feathericons.com/?ref=hackernoon.com)
-8. [feather github](https://github.com/feathericons/feather#feather)
-
-. [animate.css (1pt, just-add-water css)](https://animate.style/)
+2. [tailwind site, used "quick search" for specific styling needs](https://tailwindcss.com/docs/installation)
+4. [SweetAlert site, used the "confirm dialog" example from the recipe gallery](https://sweetalert2.github.io/)
