@@ -46,6 +46,10 @@ table {
     @apply ml-2;
 }
 
+td, th {
+    @apply p-2 border-2 border-solid border-gray;
+}
+
 nav {
     @apply ml-8 block float-left w-full mb-8;
 }

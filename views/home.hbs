@@ -26,20 +26,15 @@
                 <tr>
                     <th>author</th>
                     <th>title</th>
-                    <th>review</th>
                     <th>stars</th>
                     <th>year</th>
                     <th>genre</th>
+                    <th>review</th>
                 </tr>
                 {{#each books as |book|}}
                 <tr>
                     <td>{{book.author}}</td>
                     <td>{{book.title}}</td>
-                    {{#if book.review}}
-                        <td>{{book.review}}</td>
-                    {{else}}
-                        <td></td>
-                    {{/if}}
                     {{#if book.stars}}
                         <td>{{book.stars}}</td>
                     {{else}}
@@ -55,6 +50,11 @@
                     {{else}}
                         <td></td>
                     {{/if}}
+                    {{#if book.review}}
+                        <td>{{book.review}}</td>
+                    {{else}}
+                        <td></td>
+                    {{/if}}
                 </tr>
                 {{/each}}
             </table>
@@ -66,20 +66,15 @@
                 <tr>
                     <th>title</th>
                     <th>year</th>
-                    <th>review</th>
                     <th>stars</th>
                     <th>rating</th>
                     <th>genre</th>
+                    <th>review</th>
                 </tr>
                 {{#each movies as |movie|}}
                 <tr>
                     <td>{{movie.title}}</td>
                     <td>{{movie.year}}</td>
-                    {{#if movie.review}}
-                        <td>{{movie.review}}</td>
-                    {{else}}
-                        <td></td>
-                    {{/if}}
                     {{#if movie.stars}}
                         <td>{{movie.stars}}</td>
                     {{else}}
@@ -95,6 +90,11 @@
                     {{else}}
                         <td></td>
                     {{/if}}
+                    {{#if movie.review}}
+                        <td>{{movie.review}}</td>
+                    {{else}}
+                        <td></td>
+                    {{/if}}
                 </tr>
                 {{/each}}
             </table>
@@ -106,20 +106,15 @@
                 <tr>
                     <th>title</th>
                     <th>artist</th>
-                    <th>review</th>
                     <th>stars</th>
                     <th>year</th>
                     <th>genre</th>
+                    <th>review</th>
                 </tr>
                 {{#each albums as |album|}}
                 <tr>
                     <td>{{album.title}}</td>
                     <td>{{album.artist}}</td>
-                    {{#if album.review}}
-                        <td>{{album.review}}</td>
-                    {{else}}
-                        <td></td>
-                    {{/if}}
                     {{#if album.stars}}
                         <td>{{album.stars}}</td>
                     {{else}}
@@ -132,6 +127,11 @@
                     {{/if}}
                     {{#if album.genre}}
                         <td>{{album.genre}}</td>
+                    {{else}}
+                        <td></td>
+                    {{/if}}
+                    {{#if album.review}}
+                        <td>{{album.review}}</td>
                     {{else}}
                         <td></td>
                     {{/if}}
