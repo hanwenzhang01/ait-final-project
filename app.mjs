@@ -70,8 +70,10 @@ function filterBooks(req) {
   });
 
   app.get('/favorites', (req,res) => {
+    console.log('booksArr: ',booksArr);
     booksArr.forEach(book => console.log(book.stars));
     const favBooks = booksArr.filter(book => book.stars.length >= 4);
+    
     const favMovies = moviesArr.filter(movie => movie.stars.length >= 4);
     const favAlbums = albumsArr.filter(album => album.stars.length >= 4);
     console.log('favBooks: ',favBooks);
