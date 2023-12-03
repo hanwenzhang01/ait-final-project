@@ -76,10 +76,10 @@ function filterBooks(req) {
     res.render('favorites', {favBooks, favMovies, favAlbums});
   });
 
-  app.get('recents', (req,res) => {
-    const recentBooks = booksArr.filter(book => book.year === 2023);
-    const recentMovies = moviesArr.filter(movie => movie.year === 2023);
-    const recentAlbums = albumsArr.filter(album => album.year === 2023);
+  app.get('/recents', (req,res) => {
+    const recentBooks = booksArr.filter(book => book.year == 2023);
+    const recentMovies = moviesArr.filter(movie => movie.year == 2023);
+    const recentAlbums = albumsArr.filter(album => album.year == 2023);
     res.render('recents', {recentBooks, recentMovies, recentAlbums});
   });
 
