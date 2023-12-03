@@ -73,6 +73,9 @@ function filterBooks(req) {
     const favBooks = booksArr.filter(book => book.stars.length >= 4);
     const favMovies = moviesArr.filter(movie => movie.stars.length >= 4);
     const favAlbums = albumsArr.filter(album => album.stars.length >= 4);
+    console.log('favBooks: ',favBooks);
+    console.log('favMovies: ',favMovies);
+    console.log('favAlbums: ',favAlbums);
     res.render('favorites', {favBooks, favMovies, favAlbums});
   });
 
@@ -80,6 +83,9 @@ function filterBooks(req) {
     const recentBooks = booksArr.filter(book => Number(book.year) == 2023);
     const recentMovies = moviesArr.filter(movie => Number(movie.year) == 2023);
     const recentAlbums = albumsArr.filter(album => Number(album.year) == 2023);
+    console.log('recentBooks: ',recentBooks);
+    console.log('recentMovies: ',recentMovies);
+    console.log('recentAlbums: ',recentAlbums);
     res.render('recents', {recentBooks, recentMovies, recentAlbums});
   });
 
