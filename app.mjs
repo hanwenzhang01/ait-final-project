@@ -73,14 +73,14 @@ function filterBooks(req) {
     const favBooks = booksArr.filter(book => book.stars >= 4);
     const favMovies = moviesArr.filter(movie => movie.stars >= 4);
     const favAlbums = albumsArr.filter(album => album.stars >= 4);
-    res.render('home', {favBooks, favMovies, favAlbums});
+    res.render('favorites', {favBooks, favMovies, favAlbums});
   });
 
   app.get('recents', (req,res) => {
     const recentBooks = booksArr.filter(book => book.year === 2023);
     const recentMovies = moviesArr.filter(movie => movie.year === 2023);
     const recentAlbums = albumsArr.filter(album => album.year === 2023);
-    res.render('home', {recentBooks, recentMovies, recentAlbums});
+    res.render('recents', {recentBooks, recentMovies, recentAlbums});
   });
 
   app.get('/addBook', async (req, res) => {
