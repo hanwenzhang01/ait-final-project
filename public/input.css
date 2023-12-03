@@ -47,7 +47,7 @@ table {
 }
 
 td, th {
-    @apply p-2 border-2 border-solid border-gray;
+    @apply p-2 border-2 border-solid border-off-white;
 }
 
 nav {
