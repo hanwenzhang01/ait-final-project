@@ -70,16 +70,16 @@ function filterBooks(req) {
   });
 
   app.get('/favorites', (req,res) => {
-    const favBooks = booksArr.filter(book => book.stars >= 4);
-    const favMovies = moviesArr.filter(movie => movie.stars >= 4);
-    const favAlbums = albumsArr.filter(album => album.stars >= 4);
+    const favBooks = booksArr.filter(book => book.stars.length >= 4);
+    const favMovies = moviesArr.filter(movie => movie.stars.length >= 4);
+    const favAlbums = albumsArr.filter(album => album.stars.length >= 4);
     res.render('favorites', {favBooks, favMovies, favAlbums});
   });
 
   app.get('/recents', (req,res) => {
-    const recentBooks = booksArr.filter(book => book.year == 2023);
-    const recentMovies = moviesArr.filter(movie => movie.year == 2023);
-    const recentAlbums = albumsArr.filter(album => album.year == 2023);
+    const recentBooks = booksArr.filter(book => Number(book.year) == 2023);
+    const recentMovies = moviesArr.filter(movie => Number(movie.year) == 2023);
+    const recentAlbums = albumsArr.filter(album => Number(album.year) == 2023);
     res.render('recents', {recentBooks, recentMovies, recentAlbums});
   });
 
