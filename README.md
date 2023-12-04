@@ -88,7 +88,6 @@ as a user, I can...
 * add a new album to my shelf
 * delete all shelf entries
 
-# TODO: UPDATE RESEARCH TOPICS
 ## Research Topics
 
 * (3 points) Perform client side form validation using facile (JavaScript library)
