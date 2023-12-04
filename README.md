@@ -2,7 +2,7 @@
 
 ## Overview
 
-A virtual media stand. Users can store lists of books, movies, and albums they enjoy. Users can see the entire media stand on the home page, or see individual lists of books, movies, or albums.
+A virtual media stand. Users can store lists of books, movies, and albums they enjoy. Users can see the entire media stand on the home page. Users can add a book, movie, or album to their shelf. Users can also delete their entire shelf.
 
 ## Data Model
 
