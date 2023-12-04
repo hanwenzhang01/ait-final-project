@@ -59,6 +59,7 @@ app.use(express.urlencoded({ extended: false }));
       genre: req.body.genre.trim()
     });
     //hi lol
+      //hi!
     await book.save();
     res.redirect('/');
   });

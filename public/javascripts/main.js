@@ -1,4 +1,3 @@
-//import express from '../express';
 import { Validator, enLang as en } from '../facile-validator/dist/index.mjs';
 
 // Select the container element that contains the fields

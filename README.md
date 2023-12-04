@@ -58,35 +58,27 @@ An Example Album:
 ```
 
 
-## [Link to Commented First Draft Schema](db.mjs) 
+## [Link to Commented Schema](db.mjs) 
 
-# __TO DO: UPDATE WIREFRAMES__
 ## Wireframes
 
 /home - homepage
-<!--![list create](documentation/loginHome.png)-->
+![list create](documentation/home.png)
 
 /addBook - add a book to the shelf
-<!--![list](documentation/allShelf.png)-->
+![list](documentation/addBook.png)
 
 /addMovie - add a movie to the shelf
-<!--![list](documentation/allShelf.png)-->
+![list](documentation/addMovie.png)
 
 /addAlbum - add an album to the shelf
-<!--![list](documentation/allShelf.png)-->
+![list](documentation/addAlbum.png)
 
-/books - see all books
-<!--![list](documentation/allShelf.png)-->
+alert - popup for clear shelf button
+![list](documentation/alert.png)
 
-/movies - see all movies
-<!--![list](documentation/allShelf.png)-->
-
-/albums - see all albums
-<!--![list](documentation/allShelf.png)-->
-
-#  __TO DO: UPDATE SITE MAP__
 ## Site map
-<!--![list create](documentation/siteMap.png)-->
+![list create](documentation/siteMap.png)
 
 ## User Stories
 as a user, I can...
@@ -107,15 +99,17 @@ as a user, I can...
   * will make it easier to style the website for a more modern look
 * (2 points) SweetAlert - promise based js library for pop-ups
   * used to alert the user about invalid inputs
-* (3 points) dotenv
+* (1 point) feather icons - collection of SVG icons used through client-side js
+* (2 points) dotenv
 
 10 points total out of 10 required points
 
-
-## [Link to Initial Main Project File](app.mjs) 
+## [Link to Main Project File](app.mjs) 
 
 ## Annotations / References Used
 
 1. [facile github reference](https://github.com/upjs/facile-validator/tree/main#accepted)
 2. [tailwind site, used "quick search" for specific styling needs](https://tailwindcss.com/docs/installation)
 4. [SweetAlert site, used the "confirm dialog" example from the recipe gallery](https://sweetalert2.github.io/)
+5. [feather github reference](https://github.com/feathericons/feather#feather)
+6. [feather icons library](https://feathericons.com/)
